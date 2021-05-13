@@ -1,6 +1,5 @@
 package br.com.shortcoffee.service;
 
-import br.com.shortcoffee.entity.Cafeicultor;
 import br.com.shortcoffee.entity.SitioFazenda;
 import br.com.shortcoffee.exception.SitioFazendaException;
 import br.com.shortcoffee.repository.SitioFazendaRepository;
@@ -22,13 +21,13 @@ public class SitioFazendaService {
     }
 
     private void validacao(SitioFazenda sitioFazenda) throws SitioFazendaException {
-        Optional<SitioFazenda> SitioFazendaOptinal = sitioFazendaRepository.findById(sitioFazenda.getId());
+        Optional<SitioFazenda> sitioFazendaOptional = sitioFazendaRepository.findById(sitioFazenda.getId());
         if(sitioFazendaOptional.isPresent()){
             throw new SitioFazendaException("Sitio/Fazenda já cadastrada");
         }
     }
 
-    public List<Cafeicultor> getSitioFazendas() {
+    public List<SitioFazenda> getSitioFazendas() {
         return sitioFazendaRepository.findAll();
     }
 
