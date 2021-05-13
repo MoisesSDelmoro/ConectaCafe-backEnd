@@ -3,9 +3,10 @@ O projeto está em desenvolvimento para a disciplina de C317 (Tópicos especiais
 
 ---
 ## Tecnologias utilizadas
-* <img height="35" src="https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png"/> [Java](https://www.java.com/pt-BR/)
+* <img height="36" src="https://seeklogo.com/images/J/java-logo-7F8B35BAB3-seeklogo.com.png"/> [Java](https://www.java.com/pt-BR/)
 * <img height="33" src="https://www.felypeganzert.com/img/knowledges/maven.png"/>[Maven](https://maven.apache.org/)
-* <img height="28" src="https://miro.medium.com/max/856/1*O68LbDvD5Dcsnez73M7v4Q.png"/>[Spring boot](https://spring.io/projects/spring-boot)
+* <img height="27" src="https://miro.medium.com/max/856/1*O68LbDvD5Dcsnez73M7v4Q.png"/>[Spring boot](https://spring.io/projects/spring-boot)
+* <img height="30" src="https://seeklogo.com/images/M/mysql-logo-69B39F7D18-seeklogo.com.png"/>[MySQL](https://www.mysql.com/)
 ---
 
 ## Desenvolvedor
