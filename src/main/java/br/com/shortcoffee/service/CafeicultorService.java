@@ -3,9 +3,7 @@ package br.com.shortcoffee.service;
 import br.com.shortcoffee.entity.Cafeicultor;
 import br.com.shortcoffee.exception.CafeicultorException;
 import br.com.shortcoffee.repository.CafeicultorRepository;
-import org.apache.logging.log4j.message.Message;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
