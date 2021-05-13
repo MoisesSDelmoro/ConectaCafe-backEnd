@@ -17,7 +17,7 @@ import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8_VALUE;
 @CrossOrigin
 @RestController("API para cadastro de Sitio ou Fazenda")
 @RequestMapping("/api/coffee/sitioFazenda")
-public class SitioFazendaResourse {
+public class SitioFazendaResource {
 
     @Autowired
     private SitioFazendaService sitioFazendaService;
