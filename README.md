@@ -9,6 +9,24 @@ O projeto está em desenvolvimento para a disciplina de C317 (Tópicos especiais
 * <img height="30" src="https://seeklogo.com/images/M/mysql-logo-69B39F7D18-seeklogo.com.png"/>[MySQL](https://www.mysql.com/)
 ---
 
+## Como utilizar?
+
+- Ter instalado o [Java 11](https://www.oracle.com/br/java/technologies/javase-jdk11-downloads.html) ou superior e o [Maven](https://maven.apache.org/download.cgi).
+- As variáveis de ambiente JAVA_HOME e Path com o caminho do Maven configuradas. [tutorial](https://dicasdejava.com.br/como-instalar-o-maven-no-windows/#:~:text=Testando%20a%20instala%C3%A7%C3%A3o%20do%20maven,seu%20computador%20e%20digite%20mvn%20.&text=Se%20o%20resultado%20do%20seu,a%20pasta%20bin%20do%20maven.) 
+
+```bash
+# Clonar o repositório
+$ git clone https://github.com/MoisesSDelmoro/BackEnd
+
+#Entrar no diretório
+$ cd BackEnd
+
+# rodar
+$ code .
+
+```
+---
+
 ## Desenvolvedor
 
 <table>
