@@ -1,5 +1,5 @@
 # BACK END - Short Coffee
-O projeto está em desenvolvimento para a disciplina de C317 (Tópicos especiais) durante a graduação em Engenharia de Computação pelo [Inatel](https://inatel.br/home/). O back end está sendo desenvolvido em Java e o FRONT END está sendo desenvolvido em Flutter para Mobile e Vue.JS para WEB.
+O projeto está em desenvolvimento para a disciplina de C317 (Tópicos especiais) durante a graduação em Engenharia de Computação pelo [Inatel](https://inatel.br/home/). O back end está sendo desenvolvido em ***Java*** e o FRONT END está sendo desenvolvido em ***Flutter*** para Mobile e ***Vue.JS*** para WEB.
 
 ---
 ## Tecnologias utilizadas
