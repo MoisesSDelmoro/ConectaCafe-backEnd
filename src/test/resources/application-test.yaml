@@ -13,7 +13,7 @@ spring:
     name: coffee
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/coffee?useTimezone=true&serverTimezone=UTC&useSSL=false
+    url: jdbc:mysql://localhost:3306/coffee-test?useTimezone=true&serverTimezone=UTC&useSSL=false
     username: root
     password:
   jpa:
