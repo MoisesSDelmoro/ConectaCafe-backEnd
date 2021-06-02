@@ -8,6 +8,8 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class CafeicultorService {
@@ -24,7 +26,13 @@ public class CafeicultorService {
         Optional<Cafeicultor> cafeicultorOptional = cafeicultorRepository.findByCpf(cafeicultor.getCpf());
         if(cafeicultorOptional.isPresent()){
             throw new CafeicultorException("Cpf já cadastrado");
+        } else if(!validarEmail(cafeicultor.getEmail())) {
+            throw new CafeicultorException("Email invalido!");
         }
+    }
+
+    public boolean validarEmail(String email){
+        return email.indexOf('@') > 0;
     }
 
     public List<Cafeicultor> getCafeicultores() {
