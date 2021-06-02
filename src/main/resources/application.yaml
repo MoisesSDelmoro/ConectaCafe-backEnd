@@ -1,0 +1,27 @@
+api:
+  name: 'API @project.name@'
+  description: '@project.description'
+  version: '@project.version@'
+
+server:
+  port: 7888
+  servlet:
+    context-path: /coffee
+
+spring:
+  application:
+    name: coffee
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/coffee?useTimezone=true&serverTimezone=UTC&useSSL=false
+    username: root
+    password: vertrigo
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+    properties:
+      hibernate:
+        temp.use_jdbc_metadata_defaults: false
+        format_sql: true
