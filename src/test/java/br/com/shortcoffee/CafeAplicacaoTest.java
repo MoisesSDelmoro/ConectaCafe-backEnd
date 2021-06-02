@@ -42,7 +42,7 @@ public class CafeAplicacaoTest {
         ObjectMapper objectMapper = new ObjectMapper();
         String json = objectMapper.writeValueAsString(cafeicultor);
         mockMvc.perform(MockMvcRequestBuilders.post("/api/coffee/cafeicultor")
-                .content(json).contentType(MediaType.APPLICATION_JSON)
+                .content(json).contentType(MediaType.APPLICATION_JSON) 
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(result -> assertEquals("Cpf já cadastrado", result.getResolvedException().getMessage()));
     }
