@@ -57,4 +57,10 @@ public class SitioFazenda {
     @JoinColumn(name = "cafe_id", nullable = false)
     @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private Cafe cafe;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cafeicutor_id", nullable = false)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
+    private Cafeicultor cafeicultor;
 }
