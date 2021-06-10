@@ -1,5 +1,6 @@
 package br.com.shortcoffee.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
 import lombok.*;
 
@@ -53,6 +54,7 @@ public class SitioFazenda {
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cafe_id", nullable = true, columnDefinition = "int")
-    private Cafe cafeId;
+    @JoinColumn(name = "cafe_id", nullable = false)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
+    private Cafe cafe;
 }
