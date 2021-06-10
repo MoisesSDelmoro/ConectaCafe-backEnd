@@ -24,7 +24,7 @@ public class CafeicultorResource {
 
     @PostMapping(produces = APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity criandoCafeicultor(@RequestBody Cafeicultor cafeicultor) throws CafeicultorException {
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(cafeicultorService.save(cafeicultor).getId()).toUri();
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(cafeicultorService.save(cafeicultor).getCafeicultorId()).toUri();
         return ResponseEntity.created(location).build();
 //        return ResponseEntity.ok(cafeicultorService.save(cafeicultor));
     }

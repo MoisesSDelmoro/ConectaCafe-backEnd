@@ -24,7 +24,7 @@ public class SitioFazendaResource {
 
     @PostMapping(produces = APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity criandoSitioFazenda(@RequestBody SitioFazenda sitioFazenda) throws SitioFazendaException {
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(sitioFazendaService.save(sitioFazenda).getId()).toUri();
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(sitioFazendaService.save(sitioFazenda).getSitioFazendaId()).toUri();
         return ResponseEntity.created(location).build();
 //        return ResponseEntity.ok(sitioFazendaService.save(sitioFazenda));
     }
@@ -35,7 +35,7 @@ public class SitioFazendaResource {
     }
 
     @GetMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Optional<SitioFazenda>> getSitioFazenda(@PathVariable("id") String id) {
-        return ResponseEntity.ok(sitioFazendaService.getSitioFazenda(id));
+    public ResponseEntity<Optional<SitioFazenda>> getSitioFazenda(@PathVariable("id") Long sitioFazendaId) {
+        return ResponseEntity.ok(sitioFazendaService.getSitioFazenda(sitioFazendaId));
     }
 }

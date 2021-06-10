@@ -24,7 +24,7 @@ public class CafeResource {
 
     @PostMapping(produces = APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity criandoCafe(@RequestBody Cafe cafe) throws CafeException {
-        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(cafeService.save(cafe).getId()).toUri();
+        URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(cafeService.save(cafe).getCafeId()).toUri();
         return ResponseEntity.created(location).build();
 //        return ResponseEntity.ok(cafeService.save(cafe));
     }
@@ -35,8 +35,8 @@ public class CafeResource {
     }
 
     @GetMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
-    public ResponseEntity<Optional<Cafe>> getCafe(@PathVariable("id") String id){
-        return ResponseEntity.ok(cafeService.getCafe(id));
+    public ResponseEntity<Optional<Cafe>> getCafe(@PathVariable("id") Long cafeId){
+        return ResponseEntity.ok(cafeService.getCafe(cafeId));
     }
 
 }

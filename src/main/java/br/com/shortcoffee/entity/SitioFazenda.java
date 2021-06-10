@@ -1,5 +1,6 @@
 package br.com.shortcoffee.entity;
 
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -17,8 +18,8 @@ public class SitioFazenda {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "id", columnDefinition = "int")
-    private long id;
+    @Column(name = "sitio_fazenda_id", columnDefinition = "int")
+    private long sitioFazendaId;
 
     @Column(name = "nome")
     private String nome;
@@ -49,4 +50,9 @@ public class SitioFazenda {
 
     @Column(name = "redesSociais")
     private String redesSociais;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "cafe_id", nullable = true, columnDefinition = "int")
+    private Cafe cafeId;
 }

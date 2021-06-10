@@ -21,7 +21,7 @@ public class CafeService {
     }
 
     private void validacao(Cafe cafe) throws CafeException {
-        Optional<Cafe> cafeOptional = cafeRepository.findById(cafe.getId());
+        Optional<Cafe> cafeOptional = cafeRepository.findById(cafe.getCafeId());
         if(cafeOptional.isPresent()){
             throw new CafeException("Id já cadastrado");
         }
@@ -31,7 +31,7 @@ public class CafeService {
         return cafeRepository.findAll();
     }
 
-    public Optional<Cafe> getCafe(String id) {
-        return cafeRepository.findById(id);
+    public Optional<Cafe> getCafe(Long cafeId) {
+        return cafeRepository.findByCafeId(cafeId);
     }
 }

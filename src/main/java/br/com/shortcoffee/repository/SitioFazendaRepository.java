@@ -8,6 +8,6 @@ import java.util.Optional;
 
 public interface SitioFazendaRepository extends JpaRepository<SitioFazenda, Long>{
 
-    Optional<SitioFazenda> findById(String id);
+    Optional<SitioFazenda> findBySitioFazendaId(Long sitioFazendaId);
 
 }

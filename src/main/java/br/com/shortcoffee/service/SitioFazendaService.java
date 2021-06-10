@@ -21,7 +21,7 @@ public class SitioFazendaService {
     }
 
     private void validacao(SitioFazenda sitioFazenda) throws SitioFazendaException {
-        Optional<SitioFazenda> sitioFazendaOptional = sitioFazendaRepository.findById(sitioFazenda.getId());
+        Optional<SitioFazenda> sitioFazendaOptional = sitioFazendaRepository.findById(sitioFazenda.getSitioFazendaId());
         if(sitioFazendaOptional.isPresent()){
             throw new SitioFazendaException("Sitio/Fazenda já cadastrada");
         }
@@ -32,8 +32,8 @@ public class SitioFazendaService {
     }
 
 
-    public Optional<SitioFazenda> getSitioFazenda(String id) {
-        return sitioFazendaRepository.findById(id);
+    public Optional<SitioFazenda> getSitioFazenda(Long sitioFazendaId) {
+        return sitioFazendaRepository.findBySitioFazendaId(sitioFazendaId);
     }
 
 }

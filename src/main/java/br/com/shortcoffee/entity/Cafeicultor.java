@@ -17,8 +17,8 @@ public class Cafeicultor {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "id", columnDefinition = "int")
-    private long id;
+    @Column(name = "cafeicultor_id", columnDefinition = "int")
+    private long cafeicultorId;
 
     @Column(name = "nome")
     private String nome;
