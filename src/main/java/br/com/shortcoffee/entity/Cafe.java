@@ -37,4 +37,5 @@ public class Cafe {
 
     @Column(name = "fetilizantes")
     private String fetilizantes;
+
 }
