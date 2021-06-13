@@ -20,6 +20,9 @@ public class Cafe {
     @Column(name = "cafe_id", columnDefinition = "int")
     private long cafeId;
 
+    @Column(name = "especie")
+    private String especie;
+
     @Column(name = "variedade")
     private String variedade;
 
@@ -40,4 +43,7 @@ public class Cafe {
 
     @Column(name = "altitude")
     private String altitude;
+
+    @Column(name = "especial")
+    private boolean especial;
 }
