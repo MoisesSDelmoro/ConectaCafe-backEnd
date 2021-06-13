@@ -37,4 +37,7 @@ public class Cafe {
 
     @Column(name = "fetilizantes")
     private String fetilizantes;
+
+    @Column(name = "altitude")
+    private String altitude;
 }

@@ -40,9 +40,6 @@ public class SitioFazenda {
     @Column(name = "sobreHistoria")
     private String sobreHistoria;
 
-    @Column(name = "altitude")
-    private String altitude;
-
     @Column(name = "fotosVideos")
     private String fotosVideos;
 
