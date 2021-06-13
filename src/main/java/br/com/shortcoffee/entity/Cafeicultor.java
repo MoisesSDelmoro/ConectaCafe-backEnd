@@ -10,8 +10,7 @@ import static javax.persistence.GenerationType.IDENTITY;
 @Table(name = "cafeicultor")
 @Builder
 @AllArgsConstructor
-@NoArgsConstructor
-@Getter
+@NoArgsConstructor@Getter
 @Setter
 public class Cafeicultor {
 
