@@ -52,8 +52,8 @@ public class SitioFazenda {
     @Column(name = "Facebook")
     private String facebook;
 
-    @Column(name = "Instagran")
-    private String instagran;
+    @Column(name = "Instagram")
+    private String instagram;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
