@@ -34,9 +34,14 @@ public class CafeicultorResource {
         return ResponseEntity.ok(cafeicultorService.getCafeicultores());
     }
 
-    @GetMapping(value = "/{cpf}", produces = APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/cpf/{cpf}", produces = APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<Optional<Cafeicultor>> getCafeicultor(@PathVariable("cpf") String cpf){
         return ResponseEntity.ok(cafeicultorService.getCafeicultor(cpf));
+    }
+
+    @GetMapping(value = "email/{email}", produces = APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<Optional<Cafeicultor>> getCafeicultorEmail(@PathVariable("email") String email){
+        return ResponseEntity.ok(cafeicultorService.getCafeicultorEmail(email));
     }
 
 }

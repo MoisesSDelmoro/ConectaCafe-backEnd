@@ -8,5 +8,6 @@ import java.util.Optional;
 public interface CafeicultorRepository extends JpaRepository<Cafeicultor, Long> {
 
     Optional<Cafeicultor> findByCpf(String cpf);
+    Optional<Cafeicultor> findByEmail(String email);
 
 }

@@ -27,11 +27,21 @@ public class CafeicultorService {
         }
     }
 
+    private void validacaoEmail(Cafeicultor cafeicultor) throws CafeicultorException {
+        Optional<Cafeicultor> cafeicultorOptional = cafeicultorRepository.findByEmail(cafeicultor.getEmail());
+        if(cafeicultorOptional.isPresent()){
+            throw new CafeicultorException("Email já cadastrado");
+        }
+    }
+
     public List<Cafeicultor> getCafeicultores() {
         return cafeicultorRepository.findAll();
     }
 
     public Optional<Cafeicultor> getCafeicultor(String cpf) {
         return cafeicultorRepository.findByCpf(cpf);
+    }
+    public Optional<Cafeicultor> getCafeicultorEmail(String email) {
+        return cafeicultorRepository.findByEmail(email);
     }
 }
