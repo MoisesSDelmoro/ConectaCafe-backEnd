@@ -1,6 +1,7 @@
 package br.com.shortcoffee.resource;
 
 import br.com.shortcoffee.entity.SitioFazenda;
+import br.com.shortcoffee.exception.CafeException;
 import br.com.shortcoffee.exception.SitioFazendaException;
 import br.com.shortcoffee.service.SitioFazendaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,5 +38,11 @@ public class SitioFazendaResource {
     @GetMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<Optional<SitioFazenda>> getSitioFazenda(@PathVariable("id") Long sitioFazendaId) {
         return ResponseEntity.ok(sitioFazendaService.getSitioFazenda(sitioFazendaId));
+    }
+
+    @GetMapping(value = "/cafeicultor/{cafeicultor_id}", produces = APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<Void> getSitioFazendaCafeicultor(@PathVariable("cafeicultor_id") Long cafeicultor_id) {
+        sitioFazendaService.getSitioFazendaCafeicultor(cafeicultor_id);
+        return ResponseEntity.ok().build();
     }
 }

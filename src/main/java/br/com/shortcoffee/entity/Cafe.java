@@ -1,5 +1,7 @@
 package br.com.shortcoffee.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 import lombok.*;
 
 import javax.persistence.*;
@@ -46,4 +48,10 @@ public class Cafe {
 
     @Column(name = "especial")
     private boolean especial;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "sitio_fazenda_id", nullable = false)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
+    private SitioFazenda sitio;
 }

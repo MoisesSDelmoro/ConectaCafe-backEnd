@@ -6,6 +6,8 @@ import lombok.*;
 
 import javax.persistence.*;
 
+import java.util.List;
+
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
@@ -54,12 +56,6 @@ public class SitioFazenda {
 
     @Column(name = "Instagram")
     private String instagram;
-
-    @NotNull
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "cafe_id", nullable = false)
-    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
-    private Cafe cafe;
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY)

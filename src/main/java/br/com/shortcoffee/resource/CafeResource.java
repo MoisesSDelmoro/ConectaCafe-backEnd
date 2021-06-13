@@ -39,4 +39,15 @@ public class CafeResource {
         return ResponseEntity.ok(cafeService.getCafe(cafeId));
     }
 
+    @PutMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<Cafe> editCafe(@PathVariable("id") Long cafeId, @RequestBody Cafe cafe) throws CafeException {
+        return ResponseEntity.ok(cafeService.editCafe(cafeId, cafe));
+    }
+
+    @DeleteMapping(value = "/{id}", produces = APPLICATION_JSON_UTF8_VALUE)
+    public ResponseEntity<Void> deleteCafe(@PathVariable("id") Long cafeId) throws CafeException {
+        cafeService.deleteCafe(cafeId);
+        return ResponseEntity.ok().build();
+    }
+
 }
