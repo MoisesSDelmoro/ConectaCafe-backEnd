@@ -38,8 +38,8 @@ public class Cafe {
     @Column(name = "inseticidas")
     private String inseticidas;
 
-    @Column(name = "fetilizantes")
-    private String fetilizantes;
+    @Column(name = "fertilizantes")
+    private String fertilizantes;
 
     @Column(name = "altitude")
     private String altitude;
