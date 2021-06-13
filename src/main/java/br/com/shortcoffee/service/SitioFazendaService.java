@@ -1,6 +1,5 @@
 package br.com.shortcoffee.service;
 
-import br.com.shortcoffee.entity.Cafeicultor;
 import br.com.shortcoffee.entity.SitioFazenda;
 import br.com.shortcoffee.exception.SitioFazendaException;
 import br.com.shortcoffee.repository.CafeicultorRepository;
@@ -16,9 +15,6 @@ public class SitioFazendaService {
 
     @Autowired
     private SitioFazendaRepository sitioFazendaRepository;
-
-    @Autowired
-    private CafeicultorRepository cafeicultorRepository;
 
     public SitioFazenda save(SitioFazenda sitioFazenda) throws SitioFazendaException {
         validacao(sitioFazenda);
@@ -41,12 +37,8 @@ public class SitioFazendaService {
         return sitioFazendaRepository.findBySitioFazendaId(sitioFazendaId);
     }
 
-    public void getSitioFazendaCafeicultor(Long cafeicultor_id) {
-        Cafeicultor cafeicultor = cafeicultorRepository.findById(cafeicultor_id);
-        if(cafeicultor.isPresent()){
-            return sitioFazendaRepository.findAllByCafeicultorId(cafeicultor);
-        }
-        return;
+    public SitioFazenda getSitioFazendaCafeicultor(int cafeicultor_id) {
+        return sitioFazendaRepository.findByCafeicultorId(cafeicultor_id);
     }
 
 }
