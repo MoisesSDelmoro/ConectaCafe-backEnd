@@ -20,7 +20,7 @@
     <properties>
         <java.version>11</java.version>
         <sourceEncoding>utf-8</sourceEncoding>
-        <maven-compiler-plugin-version>3.6.2</maven-compiler-plugin-version>
+        <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
         <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
         <aws-java-sdk.version>1.11.839</aws-java-sdk.version>
     </properties>
@@ -34,7 +34,11 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>
+        </dependency>
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
