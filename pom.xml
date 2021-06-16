@@ -20,7 +20,7 @@
     <properties>
         <java.version>11</java.version>
         <sourceEncoding>utf-8</sourceEncoding>
-        <maven-compiler-plugin-version>3.8.1</maven-compiler-plugin-version>
+        <maven-compiler-plugin-version>3.6.2</maven-compiler-plugin-version>
         <spring-cloud.version>Greenwich.SR6</spring-cloud.version>
         <aws-java-sdk.version>1.11.839</aws-java-sdk.version>
     </properties>
@@ -52,14 +52,4 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>com.heroku.sdk</groupId>
-                <artifactId>heroku-maven-plugin</artifactId>
-                <version>3.0.3</version>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
