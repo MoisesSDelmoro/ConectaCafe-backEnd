@@ -39,10 +39,10 @@ public class SitioFazenda {
     @Column(name = "cep")
     private String cep;
 
-    @Column(name = "sobreHistoria")
+    @Column(name = "sobreHistoria", columnDefinition = "TEXT")
     private String sobreHistoria;
 
-    @Column(name = "fotosVideos")
+    @Column(name = "fotosVideos", columnDefinition = "TEXT")
     private String fotosVideos;
 
     @Column(name = "telefone")
