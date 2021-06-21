@@ -42,6 +42,9 @@ public class SitioFazenda {
     @Column(name = "sobreHistoria", columnDefinition = "TEXT")
     private String sobreHistoria;
 
+    @Column(name = "tags", columnDefinition = "TEXT")
+    private String tag;
+
     @Column(name = "fotosVideos", columnDefinition = "TEXT")
     private String fotosVideos;
 
